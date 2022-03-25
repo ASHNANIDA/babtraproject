@@ -1,0 +1,13 @@
+{% extends 'doc_head.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    {% for i in data %}
+<div class="alert alert-warning" role="alert">
+    <h4 class="alert-heading">{{i.subject}}</h4>
+    <p>{{i.message}}</p>
+    <hr>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

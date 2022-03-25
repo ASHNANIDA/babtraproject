@@ -1,0 +1,48 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+  <div class="p-3 mb-2 bg-success text-white text-center">Add Doctors</div>
+  <form method="POST"  >
+        {% csrf_token %}
+        <div class="form-row my-2">
+           
+              <input type="text" class="form-control" placeholder="username" name="username">
+           </div>
+              <input type="text" class="form-control" placeholder="password" name="password">
+            
+        <div class="form-row my-2 mx-2">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name" name="firstname">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" name="lastname">
+          </div>
+        </div>
+        <div class="form-row my-2 mx-2">
+            <div class="col">
+              <input type="email" class="form-control" placeholder="Email" name="email">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Phone number" name="phone">
+            </div>
+          </div>
+          <div class="form-row my-2 mx-2">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Qualification" name="qualification">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Experience" name="exp">
+            </div>
+          </div>
+          <div class="form-row mx-2 my-2">
+            <div class="col">
+              <label for="formGroupExampleInput">Image</label>
+              <input type="file" class="form-control" placeholder="Add Image" name="image">
+            </div>
+            </div>
+            <button class="btn btn-success my-2" type="submit" role="button">Add Doctors</button>							
+          </form>
+</div>
+
+{% endblock%}

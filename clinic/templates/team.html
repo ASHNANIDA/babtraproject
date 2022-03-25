@@ -1,0 +1,23 @@
+{% extends 'head.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    
+					<div class="team-top">
+							<h3>Our Team</h3>
+					</div>
+					{% for i in data %}
+					<div class="row my-3">
+						<div class="col">
+							<a href="#"> <img src="{% static 'images/a3.png' %} " alt="" class="img-responsive"> </a>
+							<div class="para">
+							<h3>{{i.firstname}}</h3>
+							<h4>{{i.experience}}</h4>
+							<p>{{i.qualification}}</p>
+							
+							<a class="btn btn-success" href="/clinic/booking/" role="button">Book Now</a>							
+						 </div>
+					</div> 
+					{% endfor %}	
+				</div>
+{% endblock %}

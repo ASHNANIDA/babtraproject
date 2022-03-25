@@ -1,0 +1,22 @@
+{% extends 'doc_head.html' %}
+{% load static %}
+{% block content %}
+
+<ul class="list-group list-group-flush">
+    {% for i in info %}
+    <li class="list-group-item"><h2>{{i.name}}</h2>
+        
+    <div class="container" id="card">
+      
+      <h4>{{i.email}}</h4>
+      <p>{{i.mobile}}</p>
+      <p>{{i.dob}}</p>
+      <p>{{i.gender}}</p>
+    </div>
+
+    </li>
+    {% endfor %}
+  </ul>
+  
+
+{% endblock %}
